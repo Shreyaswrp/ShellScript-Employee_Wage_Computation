@@ -20,3 +20,10 @@ parttimehour=8
 parttimewage=$((wageperhour*parttimehour))
 echo $parttimewage
 
+ case  $result in 
+                1)workhour=10;;
+                0)workhour=8;;
+                *)workhour=0;;
+        esac
+                echo $workhour
+
