@@ -32,3 +32,19 @@ wageperday=$dailywage
 wagepermonth=$((workingdaypermonth*wageperday))
 echo  $wagepermonth
 
+	workinghourspermonth=100
+whpm=$workinghourspermonth
+wdpm=$workingdaypermonth
+
+noofdays=0
+noofhour=0
+
+while [[ $noofdays -lt $wdpm ]] || [[ $noofhour -lt $whpm ]]
+do
+        ((noofdays++))
+        noofhour=$((noofhour+workhour))
+        wage=$((wageperhour*noofhour))
+
+done
+echo $wage
+
