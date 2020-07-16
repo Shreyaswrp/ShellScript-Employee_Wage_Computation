@@ -27,3 +27,8 @@ echo $parttimewage
         esac
                 echo $workhour
 
+workingdaypermonth=20
+wageperday=$dailywage
+wagepermonth=$((workingdaypermonth*wageperday))
+echo  $wagepermonth
+
