@@ -1,8 +1,8 @@
 #! /bin/bash -x
 echo "Welcome to employee wage computation"
 
-result=$(($RANDOM%2))
-echo $result
+	result=$(($RANDOM%2))
+	echo $result
 
 if [[ $result == 0 ]]
 then
@@ -20,13 +20,18 @@ parttimehour=8
 parttimewage=$((wageperhour*parttimehour))
 echo $parttimewage
 
- case  $result in 
+
+function getWorkHour () {
+ case  $1 in 
                 1)workhour=10;;
                 0)workhour=8;;
                 *)workhour=0;;
         esac
                 echo $workhour
 
+}
+
+workinghourrsperday="$(getWorkHours $(($RANDOM%2)))"
 workingdaypermonth=20
 wageperday=$dailywage
 wagepermonth=$((workingdaypermonth*wageperday))
