@@ -37,6 +37,7 @@ wageperday=$dailywage
 wagepermonth=$((workingdaypermonth*wageperday))
 echo  $wagepermonth
 
+
 	workinghourspermonth=100
 whpm=$workinghourspermonth
 wdpm=$workingdaypermonth
@@ -52,4 +53,11 @@ do
 
 done
 echo $wage
+
+#storing daily wage along with total wage
+
+rr[counter++]=$dailywage
+arr[counter++]=$wagepermonth
+
+echo ${arr[@]}
 
