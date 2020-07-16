@@ -11,3 +11,12 @@ else
         echo "Present"
 fi
 
+wageperhour=20
+fulldayhour=8
+dailywage=$((wageperhour*fulldayhour))
+echo $dailywage
+
+parttimehour=8
+parttimewage=$((wageperhour*parttimehour))
+echo $parttimewage
+
