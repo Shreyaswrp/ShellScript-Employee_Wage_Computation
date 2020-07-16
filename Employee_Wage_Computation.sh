@@ -61,3 +61,11 @@ arr[counter++]=$wagepermonth
 
 echo ${arr[@]}
 
+#storing dailywage along with total wage
+
+ array[count++]=$noofdays
+        array[count++]=$dailywage
+        array[count++]=$wagepermonth
+
+echo ${array[@]}
+
